@@ -1,0 +1,324 @@
+.mainOutline {
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 80px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+}
+
+.mainOutline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c09b67, transparent);
+}
+
+.left {
+    height: 70px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.left-tags {
+    display: flex;
+    gap: 2rem;
+}
+
+.left-tags > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.left-tags > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #c09b67;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.left-tags > a:hover {
+    color: #c09b67;
+    transform: translateY(-2px);
+    background: rgba(192, 155, 103, 0.1);
+}
+
+.left-tags > a:hover::after {
+    width: 80%;
+}
+
+.right {
+    height: 70px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 0.3rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(192, 155, 103, 0.3);
+}
+
+.search > input {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    height: 36px;
+    width: 174px;
+    padding: 0 1rem;
+    color: white;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search > input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search > input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 200px;
+}
+
+.search > button {
+    margin-left: 0;
+    border: none;
+    height: 36px;
+    width: 95px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #c09b67, #a57239);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.search > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(192, 155, 103, 0.4);
+}
+
+.cart {
+    transition: transform 0.3s ease;
+}
+
+.cart-link {
+    color: white;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cart-link:hover {
+    transform: scale(1.1);
+    background: rgba(192, 155, 103, 0.2);
+    color: #c09b67;
+}
+
+.profile > a {
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile > a:hover {
+    transform: scale(1.1);
+    background: rgba(192, 155, 103, 0.2);
+    color: #c09b67;
+}
+
+.moon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.moon > img {
+    height: 66px;
+    width: 79px;
+    filter: drop-shadow(0 0 20px rgba(192, 155, 103, 0.5));
+    animation: moonGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes moonGlow {
+    0% { filter: drop-shadow(0 0 15px rgba(192, 155, 103, 0.4)); }
+    100% { filter: drop-shadow(0 0 25px rgba(192, 155, 103, 0.8)); }
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    background: linear-gradient(45deg, #c09b67, #e6c28c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 10px rgba(192, 155, 103, 0.3);
+}
+
+.name > a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.name > a:hover {
+    text-shadow: 0 2px 20px rgba(192, 155, 103, 0.6);
+}
+
+@media (max-width: 1200px) {
+    .mainOutline {
+        padding: 0 1rem;
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .left, .right {
+        width: auto;
+        height: auto;
+        justify-content: center;
+    }
+    
+    .left-tags {
+        gap: 1rem;
+    }
+    
+    .moon {
+        position: relative;
+        left: auto;
+        transform: none;
+        order: 2;
+    }
+    
+    .name {
+        position: relative;
+        left: auto;
+        transform: none;
+        order: 3;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainOutline {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .left-tags {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .left-tags > a {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .search {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .search > input {
+        width: 100%;
+    }
+    
+    .moon > img {
+        height: 50px;
+        width: 60px;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    .right {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-tags > a {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .search > input {
+        width: 120px;
+    }
+    
+    .search > button {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+    
+    .name {
+        font-size: 1.3rem;
+    }
+    
+    .moon > img {
+        height: 40px;
+        width: 48px;
+    }
+}
+
+
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
