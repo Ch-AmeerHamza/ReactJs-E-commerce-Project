@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Added missing import
+import { Link } from 'react-router-dom';
 import "./FounderInfo.css"
 
 const FounderInfo = () => {
@@ -114,4 +114,4 @@ const FounderInfo = () => {
   )
 }
 
-export default FounderInfo; // Corrected export name
+export default FounderInfo;

@@ -4,17 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "lint": "eslint .",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist -b gh-pages"
-},
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -b gh-pages"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.2.0",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.5",
+    "@reduxjs/toolkit": "^2.10.1",
+    "dotenv": "^17.2.3",
     "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -23,6 +26,7 @@
     "react-router": "^6.30.1",
     "react-router-dom": "^6.30.1",
     "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

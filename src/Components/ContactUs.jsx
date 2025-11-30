@@ -19,12 +19,8 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     setIsSubmitted(true);
-    // Reset form after submission
     setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 

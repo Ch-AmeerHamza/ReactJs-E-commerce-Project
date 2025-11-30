@@ -322,3 +322,165 @@
 * {
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
+
+.navbar-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.mainOutline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+.left-tags {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+
+.moon-logo {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.moon-logo:hover {
+  transform: rotate(15deg);
+}
+
+
+.name {
+  flex: 1;
+  text-align: center;
+}
+
+.brand-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.brand-link:hover {
+  color: #f8f8f8;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #444;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.search-input:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  width: 250px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-btn {
+  padding: 0.5rem 1.5rem;
+  background: #fff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+
+.cart-link, .profile-link {
+  color: #fff;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.cart-link:hover, .profile-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.cart-icon, .profile-icon {
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .mainOutline {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .left-tags {
+    gap: 1rem;
+  }
+  
+  .search-input {
+    width: 150px;
+  }
+  
+  .brand-link {
+    font-size: 1.5rem;
+  }
+}

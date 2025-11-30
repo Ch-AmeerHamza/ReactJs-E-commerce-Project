@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import "./Home.css";
 import { Link } from 'react-router-dom';
+
 const Home = () => {
   const typedElement = useRef(null);
   const typedInstance = useRef(null);
@@ -38,8 +39,13 @@ const Home = () => {
         <img 
           src="https://png.pngtree.com/png-clipart/20221007/ourmid/pngtree-gold-moon-png-image_6289922.png" 
           alt="Moon" 
+          className="moon-image"
         />
         <span ref={typedElement} className="typedText"></span>
+        <div className="cta-buttons">
+          <Link to="/kameez" className="cta-btn primary">Explore Collection</Link>
+          <Link to="/contact" className="cta-btn secondary">Contact Us</Link>
+        </div>
       </div>
     </div>
   );

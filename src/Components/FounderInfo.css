@@ -418,7 +418,6 @@
   text-decoration: none;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -434,13 +433,11 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
-/* Staggered animations for passion cards */
 .passion-card:nth-child(1) { animation-delay: 0.1s; }
 .passion-card:nth-child(2) { animation-delay: 0.2s; }
 .passion-card:nth-child(3) { animation-delay: 0.3s; }
 .passion-card:nth-child(4) { animation-delay: 0.4s; }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .founder-container {
     padding: 40px 15px;
@@ -501,7 +498,6 @@
   }
 }
 
-/* Custom Scrollbar */
 .founder-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -519,7 +515,6 @@
   background: linear-gradient(135deg, #a57239, #c09b67);
 }
 
-/* Achievement Badges */
 .achievement-badges {
   display: flex;
   justify-content: center;
